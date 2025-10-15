@@ -90,4 +90,5 @@ Este projeto integra os conceitos aprendidos nas quatro unidades da disciplina, 
 
 Este projeto é de uso educacional e livre para fins de aprendizado.
 © 2025 ONG Esperança — Todos os direitos reservados.
+
 💚 “Pequenas ações, quando somadas, transformam o mundo.”

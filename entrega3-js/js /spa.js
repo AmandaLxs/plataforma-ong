@@ -1,93 +1,82 @@
-// spa.js
-const pages = {
-  inicio: `
-    <section>
-      <h1>ONG Esperança</h1>
-      <p>Trabalhando por um futuro melhor para todos.</p>
-      <img src="img/ong.jpg" alt="Equipe da ONG em ação social" width="600" />
-    </section>
+// spa.js — controla as "páginas" do site
 
+export const templates = {
+  home: `
     <section>
-      <h2>Missão, Visão e Valores</h2>
-      <p><strong>Missão:</strong> Promover inclusão e desenvolvimento social.</p>
-      <p><strong>Visão:</strong> Ser referência em impacto social no Brasil.</p>
-      <p><strong>Valores:</strong> Solidariedade, Compromisso, Respeito.</p>
-    </section>
+      <h1>Bem-vinda(o) à ONG ADS 💙</h1>
+      <p>Nosso propósito é transformar vidas por meio de projetos sociais em educação, saúde e inclusão.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="imagens/educacao.jpg" alt="Crianças estudando">
+          <h3>Educação Pública</h3>
+          <p>Projetos que melhoram a qualidade da educação pública e incentivam o aprendizado criativo.</p>
+        </article>
 
-    <section>
-      <h2>Contato</h2>
-      <p>Email: contato@ongesperanca.org</p>
-      <p>Telefone: (11) 91234-5678</p>
+        <article class="card">
+          <img src="imagens/saude.jpg" alt="Profissionais de saúde">
+          <h3>Clínica Social</h3>
+          <p>Atendimento humanizado e acessível para comunidades em vulnerabilidade social.</p>
+        </article>
+      </div>
     </section>
   `,
 
   projetos: `
     <section>
-      <h1>Projetos Sociais</h1>
-      <article>
-        <h2>Projeto Criança Feliz</h2>
-        <img src="img/projeto1.jpg" alt="Crianças em projeto social" width="500" />
-        <p>Atividades educativas e culturais para crianças em situação de vulnerabilidade.</p>
-      </article>
-
-      <article>
-        <h2>Doe Agora</h2>
-        <p>Ajude-nos a continuar esse trabalho. Qualquer valor faz a diferença.</p>
-        <p><strong>Chave PIX:</strong> doacoes@ongesperanca.org</p>
-      </article>
-    </section>
-
-    <section>
-      <h2>Seja Voluntário</h2>
-      <p>Participe como voluntário nos nossos projetos. Sua ajuda é essencial!</p>
-      <img src="img/voluntariado.jpg" alt="Voluntários em atividade" width="500" />
+      <h1>Projetos em Andamento 🚀</h1>
+      <ul>
+        <li>📚 Projeto Educação para Todos</li>
+        <li>🩺 Mutirão de Saúde — Novembro</li>
+        <li>🌱 Sustentabilidade nas Escolas</li>
+      </ul>
     </section>
   `,
 
-  cadastro: `
+  contato: `
     <section>
-      <h1>Cadastro de Voluntário</h1>
-      <form id="formCadastro">
-        <fieldset>
-          <legend>Informações Pessoais</legend>
+      <h1>Entre em contato 💌</h1>
+      <form id="form-contato" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+        </div>
 
-          <label for="nome">Nome Completo:</label>
-          <input type="text" id="nome" name="nome" required>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@email.com">
+        </div>
 
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
 
-          <label for="cpf">CPF:</label>
-          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
-
-          <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" required>
-        </fieldset>
-
-        <fieldset>
-          <legend>Endereço</legend>
-          <label for="cidade">Cidade:</label>
-          <input type="text" id="cidade" name="cidade" required>
-
-          <label for="estado">Estado:</label>
-          <select id="estado" name="estado" required>
-            <option value="">Selecione</option>
-            <option value="SP">SP</option>
-            <option value="RJ">RJ</option>
-            <option value="MG">MG</option>
-            <option value="RS">RS</option>
-          </select>
-        </fieldset>
-
-        <button type="submit">Enviar Cadastro</button>
+        <button type="submit" class="btn">Enviar</button>
+        <div id="alerta-form" aria-live="polite"></div>
       </form>
-      <div id="mensagem"></div>
+
+      <div class="social-section">
+        <h2>Siga nossas redes sociais 🌍</h2>
+        <p>Fique por dentro das campanhas, eventos e mutirões da ONG ADS:</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <img src="imagens/instagram.png" alt="Instagram" class="icon">
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <img src="imagens/facebook.png" alt="Facebook" class="icon">
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <img src="imagens/linkedin.png" alt="LinkedIn" class="icon">
+          </a>
+        </div>
+      </div>
     </section>
   `
 };
 
-// Função para trocar conteúdo
-export function loadPage(page) {
-  const content = document.getElementById('content');
-  content.innerHTML = pages[page] || pages.inicio;
+// Função que carrega a "página" conforme o hash (#home, #projetos, etc.)
+export function carregarPagina(hash) {
+  const app = document.getElementById('app');
+  const rota = hash.replace('#', '') || 'home';
+  app.innerHTML = templates[rota] || `<h2>Página não encontrada</h2>`;
 }

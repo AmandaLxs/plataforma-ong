@@ -1,4 +1,5 @@
-// main.js
+// main.js - inicializa a SPA e a validação
+
 import { loadPage } from './spa.js';
 import { initFormValidation } from './formValidation.js';
 
@@ -13,7 +14,7 @@ function initSPA() {
     });
   });
 
-  // Carrega a página inicial ao abrir
+  // Carrega a página inicial automaticamente
   loadPage('inicio');
 }
 

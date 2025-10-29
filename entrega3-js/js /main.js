@@ -1,23 +1,36 @@
-// main.js
-import { loadPage } from './spa.js';
-import { initFormValidation } from './formValidation.js';
+import { carregarPagina } from "./spa.js";
 
-function initSPA() {
-  const navLinks = document.querySelectorAll('.nav-link');
+function inicializarSPA() {
+  carregarPagina(location.hash);
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const page = link.getAttribute('href').substring(1);
-      loadPage(page);
-    });
+  window.addEventListener("hashchange", () => {
+    carregarPagina(location.hash);
+    inicializarForm();
   });
-
-  // Carrega a página inicial ao abrir o site
-  loadPage('inicio');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initSPA();
-  initFormValidation();
+function inicializarForm() {
+  const form = document.getElementById("form-contato");
+  if (!form) return;
+
+  const alerta = document.getElementById("alerta-form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+
+    if (!nome || !email.includes("@")) {
+      alerta.innerHTML = `<div class="alert error">⚠️ Por favor, preencha nome e e-mail válidos.</div>`;
+      return;
+    }
+
+    alerta.innerHTML = `<div class="alert success">✅ Mensagem enviada com sucesso!</div>`;
+    form.reset();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  inicializarSPA();
+  inicializarForm();
 });

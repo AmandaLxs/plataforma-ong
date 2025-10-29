@@ -14,10 +14,19 @@ const pages = {
       <p><strong>Valores:</strong> Solidariedade, Compromisso, Respeito.</p>
     </section>
 
-    <section>
-      <h2>Contato</h2>
-      <p>Email: contato@ongesperanca.org</p>
-      <p>Telefone: (11) 91234-5678</p>
+    <section class="social-section">
+      <h2>Siga nossas redes sociais 🌍</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icon">
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="img/facebook.png" alt="Facebook" class="icon">
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn" class="icon">
+        </a>
+      </div>
     </section>
   `,
 
@@ -35,12 +44,6 @@ const pages = {
         <p>Ajude-nos a continuar esse trabalho. Qualquer valor faz a diferença.</p>
         <p><strong>Chave PIX:</strong> doacoes@ongesperanca.org</p>
       </article>
-    </section>
-
-    <section>
-      <h2>Seja Voluntário</h2>
-      <p>Participe como voluntário nos nossos projetos. Sua ajuda é essencial!</p>
-      <img src="img/voluntariado.jpg" alt="Voluntários em atividade" width="500" />
     </section>
   `,
 
@@ -85,26 +88,13 @@ const pages = {
     </section>
   `
 };
- <div class="social-section">
-        <h2>Siga nossas redes sociais 🌍</h2>
-        <p>Fique por dentro das campanhas, eventos e mutirões da ONG ADS:</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <img src="imagens/instagram.png" alt="Instagram" class="icon">
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-            <img src="imagens/facebook.png" alt="Facebook" class="icon">
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-            <img src="imagens/linkedin.png" alt="LinkedIn" class="icon">
-          </a>
-        </div>
-      </div>
-    </section>
-  `
+
+// Função para trocar o conteúdo dinamicamente
+export function loadPage(page) {
+  const content = document.getElementById('content');
+  content.innerHTML = pages[page] || pages.inicio;
 }
 
-// Função para trocar conteúdo
 export function loadPage(page) {
   const content = document.getElementById('content');
   content.innerHTML = pages[page] || pages.inicio;

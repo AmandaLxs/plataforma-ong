@@ -1,4 +1,5 @@
-// spa.js
+// spa.js - Sistema SPA com templates em JS
+
 const pages = {
   inicio: `
     <section>
@@ -17,13 +18,13 @@ const pages = {
     <section class="social-section">
       <h2>Siga nossas redes sociais 🌍</h2>
       <div class="social-links">
-        <a href="https://www.instagram.com/" target="_blank">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
           <img src="img/instagram.png" alt="Instagram" class="icon">
         </a>
-        <a href="https://www.facebook.com/" target="_blank">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
           <img src="img/facebook.png" alt="Facebook" class="icon">
         </a>
-        <a href="https://www.linkedin.com/" target="_blank">
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
           <img src="img/linkedin.png" alt="LinkedIn" class="icon">
         </a>
       </div>
@@ -69,6 +70,7 @@ const pages = {
 
         <fieldset>
           <legend>Endereço</legend>
+
           <label for="cidade">Cidade:</label>
           <input type="text" id="cidade" name="cidade" required>
 
@@ -84,12 +86,13 @@ const pages = {
 
         <button type="submit">Enviar Cadastro</button>
       </form>
+
       <div id="mensagem"></div>
     </section>
   `
 };
 
-// Função para trocar o conteúdo dinamicamente
+// Função para trocar conteúdo dinamicamente
 export function loadPage(page) {
   const content = document.getElementById('content');
   content.innerHTML = pages[page] || pages.inicio;

@@ -7,7 +7,6 @@ O objetivo é demonstrar a evolução do aprendizado em **HTML, CSS e JavaScript
 ---
 
 ## 🗂️ Estrutura do Repositório
-
 ong-ads/
 │
 ├── entrega1-html/
@@ -45,7 +44,7 @@ Foi criada uma identidade visual consistente para o projeto.
 ---
 
 ### ⚙️ Entrega 3 — JavaScript Avançado
-Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico e validação de formulários.  
+Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico, templates JavaScript e validação de formulários.  
 O código foi modularizado, aplicando boas práticas e organização.
 
 🔗 [Acesse a pasta da entrega 3](./entrega3-js)
@@ -63,6 +62,5 @@ O código foi modularizado, aplicando boas práticas e organização.
 **Amanda Lima da Silva**  
 Disciplina: Desenvolvimento Web  
 Curso: Análise e Desenvolvimento de Sistemas  
-Instituição: Universidade Cruzeiro do Sul Virtual  
+Instituição: Universidade Cruzeiro do Sul Virtual.  
 Ano: 2025
-

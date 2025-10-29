@@ -13,7 +13,7 @@ function initSPA() {
     });
   });
 
-  // Carrega a página inicial ao abrir o site
+  // Carrega a página inicial ao abrir
   loadPage('inicio');
 }
 

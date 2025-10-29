@@ -192,3 +192,94 @@ footer {
     width: 100%;
   }
 }
+
+.form-container {
+  background: white;
+  padding: var(--space-5);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-xl);
+  text-align: center;
+}
+
+form fieldset {
+  border: 1px solid var(--color-light);
+  padding: var(--space-4);
+  border-radius: 10px;
+  margin-bottom: var(--space-4);
+}
+
+form legend {
+  padding: 0 var(--space-2);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  font-size: var(--font-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-top: var(--space-3);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1.5px solid var(--color-light);
+  border-radius: 8px;
+  font-size: var(--font-sm);
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-5);
+  border-radius: 8px;
+  font-size: var(--font-md);
+  cursor: pointer;
+  width: 100%;
+  margin-top: var(--space-2);
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 480px) {
+  .form-container {
+    padding: var(--space-4);
+    margin: var(--space-3);
+  }
+
+  button[type="submit"] {
+    font-size: var(--font-sm);
+    padding: var(--space-2);
+  }
+}

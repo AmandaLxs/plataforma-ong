@@ -94,3 +94,32 @@ button:disabled {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.social-section {
+  margin-top: 2rem;
+  text-align: center;
+  background: #f8f9ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.social-section h2 {
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}

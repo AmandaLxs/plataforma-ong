@@ -1,94 +1,68 @@
-# 🌱 Plataforma ONG Esperança
+# 🌍 Projeto ONG Esperança — Repositório de Entregas
 
-Projeto desenvolvido como parte da disciplina de **Desenvolvimento Front-End** do curso de **Análise e Desenvolvimento de Sistemas (ADS)**.  
-O objetivo é criar uma plataforma web moderna e acessível para **ONGs**, conectando causas sociais a voluntários e doadores.
-
----
-
-## 💡 Contexto
-
-O terceiro setor brasileiro é uma potência social — movimenta mais de **R$ 15 bilhões por ano** e emprega cerca de **3 milhões de pessoas**.  
-Mesmo assim, **apenas 30% das organizações** têm presença digital adequada.  
-
-Este projeto nasceu com a missão de mudar esse cenário, oferecendo uma solução acessível e funcional que dá voz e visibilidade a quem transforma vidas. 🌍
+## 📘 Sobre o Projeto
+Este repositório contém as três entregas do projeto **ONG Esperança**, desenvolvido para a disciplina de **Desenvolvimento Web**.  
+O objetivo é demonstrar a evolução do aprendizado em **HTML, CSS e JavaScript**, construindo uma aplicação web completa, moderna e responsiva.
 
 ---
 
-## 🎯 Objetivo do Projeto
+## 🗂️ Estrutura do Repositório
 
-Desenvolver uma **plataforma web completa** para que ONGs possam:
-
-- Divulgar seus projetos e resultados;  
-- Gerenciar voluntários e doações;  
-- Engajar apoiadores;  
-- Ampliar sua presença digital com acessibilidade e transparência.
-
----
-
-## 🧩 Estrutura do Projeto
-
-plataforma-ong/
-├── index.html # Página inicial da ONG
-├── projetos.html # Página com projetos sociais e doações
-├── cadastro.html # Formulário de cadastro de voluntários
-├── img/ # Imagens e logotipos usados nas páginas
-└── scripts.js # (em desenvolvimento) - futura interação com formulários
+ong-ads/
+│
+├── entrega1-html/
+│ └── Arquivos da entrega 1 (HTML)
+│
+├── entrega2-css/
+│ └── Arquivos da entrega 2 (CSS e design system)
+│
+├── entrega3-js/
+│ └── Arquivos da entrega 3 (JavaScript dinâmico)
+│
+└── README.md ← este arquivo
 
 ---
 
-## 🖥️ Páginas e Funcionalidades
+## 📑 Entregas
 
-### 🏠 **Início (`index.html`)**
-Apresenta a ONG, sua missão, visão e valores, além de informações de contato e imagem institucional.  
+### 🧱 Entrega 1 — Estrutura HTML
+Criação da estrutura inicial do site da **ONG Esperança**, utilizando boas práticas de semântica e acessibilidade.  
+**Páginas:**  
+- Início  
+- Projetos  
+- Cadastro de Voluntários  
 
-### 💬 **Projetos (`projetos.html`)**
-Mostra os principais projetos sociais, campanhas de doação e formas de contribuição.  
-Inclui chamadas diretas para doação via PIX e incentivo ao voluntariado.  
-
-### 🧍 **Cadastro (`cadastro.html`)**
-Formulário completo com validações nativas em HTML5 para o cadastro de novos voluntários.  
-Inclui campos de CPF, telefone, data de nascimento e endereço, com máscaras e estrutura semântica bem definida.  
+🔗 [Acesse a pasta da entrega 1](./entrega1-html)
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+### 🎨 Entrega 2 — Estilização com CSS
+Aplicação de um **sistema de design**, utilizando variáveis, grid, espaçamento modular e responsividade.  
+Foi criada uma identidade visual consistente para o projeto.
 
-- **HTML5** – Estrutura semântica e formulários complexos  
-- **CSS3** *(em próximas etapas)* – Estilização e responsividade  
-- **JavaScript** *(em desenvolvimento)* – Interatividade e validações dinâmicas  
-- **Git/GitHub** – Controle de versão e publicação do projeto  
-
----
-
-## 📱 Requisitos Técnicos
-
-- **Responsividade:** layout adaptável a dispositivos móveis e desktops  
-- **Acessibilidade:** foco em boas práticas e semântica HTML  
-- **Desempenho:** imagens otimizadas e carregamento leve  
-- **SEO:** estrutura com meta tags descritivas e hierarquia de títulos correta  
+🔗 [Acesse a pasta da entrega 2](./entrega2-css)
 
 ---
 
-## 🧭 Objetivos Acadêmicos
+### ⚙️ Entrega 3 — JavaScript Avançado
+Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico, templates JavaScript e validação de formulários.  
+O código foi modularizado, aplicando boas práticas e organização.
 
-Este projeto integra os conceitos aprendidos nas quatro unidades da disciplina, permitindo que o grupo:
-
-- Aplique **semântica HTML5** em múltiplas páginas;  
-- Implemente **formulários complexos e acessíveis**;  
-- Utilize **boas práticas de versionamento e documentação**;  
-- Desenvolva **projetos sociais com impacto real**.
+🔗 [Acesse a pasta da entrega 3](./entrega3-js)
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🛠️ Tecnologias Utilizadas
+- **HTML5**
+- **CSS3 (Design System e Responsividade)**
+- **JavaScript (DOM, SPA e Módulos)**
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/seuusuario/plataforma-ong.git
+---
 
-📜 Licença
+## 👩‍💻 Autora
+**Amanda Lima da Silva**  
+Disciplina: Desenvolvimento Web  
+Curso: Análise e Desenvolvimento de Sistemas  
+Instituição: Universidade Cruzeiro do Sul Virtual  
+Ano: 2025
 
-Este projeto é de uso educacional e livre para fins de aprendizado.
-© 2025 ONG Esperança — Todos os direitos reservados.
-
-💚 “Pequenas ações, quando somadas, transformam o mundo.”

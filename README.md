@@ -45,7 +45,7 @@ Foi criada uma identidade visual consistente para o projeto.
 ---
 
 ### ⚙️ Entrega 3 — JavaScript Avançado
-Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico, templates JavaScript e validação de formulários.  
+Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico e validação de formulários.  
 O código foi modularizado, aplicando boas práticas e organização.
 
 🔗 [Acesse a pasta da entrega 3](./entrega3-js)

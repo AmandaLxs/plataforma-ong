@@ -1,1 +1,44 @@
+body {
+  font-family: var(--fonte-principal);
+  margin: 0;
+  background-color: var(--cor-neutra-clara);
+  color: var(--cor-neutra-escura);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 
+header, footer {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--esp-2);
+}
+
+main {
+  padding: var(--esp-3);
+  display: grid;
+  gap: var(--esp-4);
+}
+
+/* Grid de 12 colunas */
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--esp-2);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

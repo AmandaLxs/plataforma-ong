@@ -1,7 +1,7 @@
 @import url('variables.css');
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   background-color: var(--color-light);
   color: var(--color-dark);
@@ -9,21 +9,35 @@ body {
 
 /* HEADER */
 header {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--space-2) var(--space-4);
-  background-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-header img {
-  width: 100px;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo-area img {
+  width: 60px;
+  border-radius: 8px;
+}
+
+.logo-area h1 {
+  font-size: var(--font-lg);
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: var(--space-2);
+  gap: var(--space-3);
   margin: 0;
   padding: 0;
 }
@@ -32,25 +46,126 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: 0.3s;
+  position: relative;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after, nav a.active::after {
+  width: 100%;
 }
 
 /* MAIN */
 main {
-  padding: var(--space-4);
-  display: grid;
+  padding: var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--space-4);
 }
 
-/* SEÇÕES */
-section {
+/* HOME */
+.home-banner {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-success));
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  padding: var(--space-5) var(--space-3);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  max-width: 1000px;
+  width: 100%;
+}
+
+.home-banner h2 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-2);
+}
+
+.btn-banner {
+  background: white;
+  color: var(--color-primary-dark);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: #f4f4f4;
+}
+
+.intro {
   background: white;
   border-radius: 12px;
-  padding: var(--space-4);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: var(--space-4);
+  text-align: center;
+  max-width: 900px;
+}
+
+.intro img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-top: var(--space-3);
+}
+
+/* PROJETOS */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.projeto-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding-bottom: var(--space-3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.projeto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.projeto-card h3 {
+  color: var(--color-primary);
+  margin: var(--space-2) 0 var(--space-1);
+}
+
+.doacao {
+  margin-top: var(--space-5);
+  background: #fff8e1;
+  border-left: 5px solid var(--color-accent);
+  padding: var(--space-3);
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
@@ -58,39 +173,22 @@ footer {
   background-color: var(--color-primary-dark);
   color: white;
   text-align: center;
-  padding: var(--space-2);
+  padding: var(--space-3);
+  margin-top: auto;
 }
 
-/* BOTÕES */
-button {
-  background-color: var(--color-secondary);
-  color: white;
-  padding: var(--space-2) var(--space-3);
-  border: none;
-  border-radius: 8px;
-  font-size: var(--font-sm);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: var(--color-primary-dark);
-}
-
-button:disabled {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-}
-
-/* GRID RESPONSIVO */
-@media (max-width: 1024px) {
-  main {
-    grid-template-columns: 1fr;
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: var(--space-2);
   }
-}
 
-@media (min-width: 1025px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
+  .home-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro img {
+    width: 100%;
   }
 }

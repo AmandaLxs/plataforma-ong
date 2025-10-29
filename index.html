@@ -18,10 +18,13 @@
     h1 {
       color: #333;
       margin-bottom: 40px;
+      text-align: center;
     }
     .links {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
     a {
       text-decoration: none;
@@ -30,18 +33,30 @@
       padding: 15px 25px;
       border-radius: 8px;
       transition: 0.3s;
+      font-weight: bold;
     }
     a:hover {
       background-color: #45a049;
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 50px;
+      color: #555;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <h1>Plataforma ONG - Entregas</h1>
+
   <div class="links">
     <a href="entrega1/index.html" target="_blank">Entrega 1</a>
     <a href="entrega2/index.html" target="_blank">Entrega 2</a>
-    <a href="entrega2/index.html" target="_blank">Entrega 3</a>
+    <a href="entrega3-js/index.html" target="_blank">Entrega 3 (JavaScript)</a>
   </div>
+
+  <footer>
+    <p>Desenvolvido por [Seu Nome] — 2025</p>
+  </footer>
 </body>
 </html>

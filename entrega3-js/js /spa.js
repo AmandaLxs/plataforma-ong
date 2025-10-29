@@ -94,8 +94,3 @@ export function loadPage(page) {
   const content = document.getElementById('content');
   content.innerHTML = pages[page] || pages.inicio;
 }
-
-export function loadPage(page) {
-  const content = document.getElementById('content');
-  content.innerHTML = pages[page] || pages.inicio;
-}

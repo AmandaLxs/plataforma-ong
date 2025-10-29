@@ -33,8 +33,6 @@
     <p>&copy; 2025 ONG Esperança. Todos os direitos reservados.</p>
   </footer>
 
-<main id="content"></main>
-
   <!-- JS -->
   <script src="js/spa.js"></script>
   <script src="js/formValidation.js"></script>

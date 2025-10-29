@@ -1,33 +1,37 @@
-// formValidation.js - validação simples de formulário
+// formValidation.js
+import { aplicarMascaraCPF, aplicarMascaraTelefone, aplicarMascaraCEP, mostrarMensagem } from './utils.js';
 
-export function initFormValidation() {
-  document.addEventListener('submit', (e) => {
-    if (e.target.id === 'formCadastro') {
-      e.preventDefault();
+export function inicializarValidacaoFormulario() {
+  const form = document.getElementById('formCadastro');
+  if (!form) return;
 
-      const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const cpf = document.getElementById('cpf').value.trim();
-      const mensagem = document.getElementById('mensagem');
-      mensagem.innerHTML = '';
+  const cpf = document.getElementById('cpf');
+  const telefone = document.getElementById('telefone');
+  const cep = document.getElementById('cep');
 
-      if (!nome || !email || !cpf) {
-        mensagem.innerHTML = '<p class="alert erro">⚠️ Preencha todos os campos obrigatórios.</p>';
-        return;
-      }
+  // Máscaras
+  cpf.addEventListener('input', e => e.target.value = aplicarMascaraCPF(e.target.value));
+  telefone.addEventListener('input', e => e.target.value = aplicarMascaraTelefone(e.target.value));
+  cep.addEventListener('input', e => e.target.value = aplicarMascaraCEP(e.target.value));
 
-      if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
-        mensagem.innerHTML = '<p class="alert erro">📧 Digite um e-mail válido.</p>';
-        return;
-      }
+  // Validação do formulário
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
-      if (!/^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$/.test(cpf)) {
-        mensagem.innerHTML = '<p class="alert erro">🧾 CPF inválido. Use o formato 000.000.000-00.</p>';
-        return;
-      }
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
 
-      mensagem.innerHTML = '<p class="alert sucesso">✅ Cadastro enviado com sucesso!</p>';
-      e.target.reset();
+    if (!nome || !email) {
+      mostrarMensagem('Preencha todos os campos obrigatórios!', 'erro');
+      return;
     }
+
+    if (!email.includes('@')) {
+      mostrarMensagem('E-mail inválido!', 'erro');
+      return;
+    }
+
+    mostrarMensagem('Cadastro enviado com sucesso!');
+    form.reset();
   });
 }

@@ -30,4 +30,3 @@ export function mostrarMensagem(texto, tipo = 'sucesso') {
   msg.style.display = 'block';
   setTimeout(() => (msg.style.display = 'none'), 3000);
 }
-

@@ -1,53 +1,45 @@
+/* =======================================
+   🎨 VARIABLES.CSS — ATIVIDADE 4
+   Define paleta de cores, espaçamentos e tipografia
+   Inclui modo escuro e alto contraste (WCAG 2.1 AA)
+========================================= */
+
 :root {
-  /* 🎨 Paleta de cores (8 cores) */
+  /* 🎨 CORES PRINCIPAIS */
   --color-primary: #27ae60;
+  --color-primary-light: #2ecc71;
   --color-primary-dark: #1e8449;
-  --color-secondary: #2980b9;
   --color-accent: #f1c40f;
-  --color-danger: #e74c3c;
-  --color-success: #2ecc71;
-  --color-light: #ecf0f1;
-  --color-dark: #2c3e50;
+  --color-muted: #7f8c8d;
+  --color-text: #2c3e50;
+  --color-surface: #ffffff;
+  --color-border: #dcdcdc;
+  --color-bg: #f9f9f9;
 
-  /* 📝 Tipografia (5 tamanhos) */
-  --font-xs: 0.8rem;
-  --font-sm: 1rem;
-  --font-md: 1.25rem;
-  --font-lg: 1.5rem;
-  --font-xl: 2rem;
-
-  /* 📏 Espaçamento modular */
+  /* 🧭 ESPAÇAMENTO */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 32px;
   --space-5: 48px;
-  --space-6: 64px;
+
+  /* 🔤 TIPOGRAFIA */
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+
+  /* 🧱 OUTROS */
+  --transition: 0.3s ease;
 }
 
-/* Variáveis padrão */
-:root {
-  --cor-fundo: #fff;
-  --cor-texto: #000;
-  --cor-primaria: #007acc;
-  /* ... outras variáveis */
-}
-
-/* Modo alto contraste */
-@media (prefers-contrast: more) {
-  :root {
-    --cor-fundo: #000;
-    --cor-texto: #fff;
-    --cor-primaria: #ff0;
-  }
-}
-
-/* Modo escuro */
+/* 🌙 MODO ESCURO AUTOMÁTICO (preferências do usuário) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --cor-fundo: #121212;
-    --cor-texto: #e0e0e0;
-    --cor-primaria: #1e90ff;
-  }
-}
-
+    --color-primary: #2ecc71;
+    --color-primary-light: #58d68d;
+    --color-primary-dark: #145a32;
+    --color-accent: #f7dc6f;
+    --color-muted: #bdc3c7;
+    --color-text: #ecf0f1;
+    --color-surface: #1c1c1c;
+    --color-border: #333;

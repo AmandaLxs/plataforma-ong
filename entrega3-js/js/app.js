@@ -37,3 +37,15 @@ document.querySelectorAll('nav a').forEach(link => {
 
 // Página inicial ao abrir
 window.addEventListener('DOMContentLoaded', () => carregarPagina('home'));
+const btn = document.getElementById('themeToggle');
+if(btn){
+  btn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark-mode');
+    btn.setAttribute('aria-pressed', String(isDark));
+    localStorage.setItem('themeDark', isDark ? '1' : '0');
+  });
+  if(localStorage.getItem('themeDark') === '1') {
+    document.documentElement.classList.add('dark-mode');
+  }
+}
+

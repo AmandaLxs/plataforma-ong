@@ -1,66 +1,44 @@
-# 🌍 Projeto ONG Esperança — Repositório de Entregas
+# Plataforma ONG
 
-## 📘 Sobre o Projeto
-Este repositório contém as três entregas do projeto **ONG Esperança**, desenvolvido para a disciplina de **Desenvolvimento Web**.  
-O objetivo é demonstrar a evolução do aprendizado em **HTML, CSS e JavaScript**, construindo uma aplicação web completa, moderna e responsiva.
+Projeto desenvolvido para a disciplina de Desenvolvimento Web na **Universidade Cruzeiro do Sul Virtual**.
 
 ---
 
-## 🗂️ Estrutura do Repositório
-ong-ads/
-│
-├── entrega1-html/
-│ └── Arquivos da entrega 1 (HTML)
-│
-├── entrega2-css/
-│ └── Arquivos da entrega 2 (CSS e design system)
-│
-├── entrega3-js/
-│ └── Arquivos da entrega 3 (JavaScript dinâmico)
-│
-└── README.md ← este arquivo
+## 🔗 Projeto Online
+
+[Plataforma ONG no GitHub Pages](https://amandalxs.github.io/plataforma-ong/)
 
 ---
 
-## 📑 Entregas
+## 📂 Estrutura
 
-### 🧱 Entrega 1 — Estrutura HTML
-Criação da estrutura inicial do site da **ONG Esperança**, utilizando boas práticas de semântica e acessibilidade.  
-**Páginas:**  
-- Início  
-- Projetos  
-- Cadastro de Voluntários  
-
-🔗 [Acesse a pasta da entrega 1](./entrega1-html)
-
----
-
-### 🎨 Entrega 2 — Estilização com CSS
-Aplicação de um **sistema de design**, utilizando variáveis, grid, espaçamento modular e responsividade.  
-Foi criada uma identidade visual consistente para o projeto.
-
-🔗 [Acesse a pasta da entrega 2](./entrega2-css)
+- `index.html` — Página principal com links para todas as entregas  
+- `home.html` — Página inicial  
+- `projetos.html` — Projetos da ONG  
+- `cadastro.html` — Formulário de cadastro de voluntários  
+- `css/` — `variables.css`, `layout.css`, `components.css`, `style.css`  
+- `js/` — `app.js`, `formValidation.js`, `utils.js`  
+- `imagens/` — `logo.png`, `ong.jpg`, `projeto1.jpg`, `projeto2.jpg`, `voluntariado.jpg`
 
 ---
 
-### ⚙️ Entrega 3 — JavaScript Avançado
-Transformação do site em uma **aplicação interativa**, com manipulação do DOM, SPA básico, templates JavaScript e validação de formulários.  
-O código foi modularizado, aplicando boas práticas e organização.
+## 📦 Executando Localmente
 
-🔗 [Acesse a pasta da entrega 3](./entrega3-js)
+```bash
+git clone https://github.com/amandalxs/plataforma-ong.git
+cd plataforma-ong
+# Abra index.html no navegador ou use servidor local
+🚀 Funcionalidades
 
----
+Cadastro de voluntários responsivo e acessível
 
-## 🛠️ Tecnologias Utilizadas
-- **HTML5**
-- **CSS3 (Design System e Responsividade)**
-- **JavaScript (DOM, SPA e Módulos)**
+Seção de projetos com cards interativos
 
----
+Modo claro / escuro
 
-## 👩‍💻 Autora
-**Amanda Lima da Silva**  
-Disciplina: Desenvolvimento Web  
-Curso: Análise e Desenvolvimento de Sistemas  
-Instituição: Universidade Cruzeiro do Sul Virtual.  
-Ano: 2025
+Navegação por teclado e suporte a leitores de tela
+
+Layout responsivo e otimizado
+
+Desenvolvido por Amanda Lima — 2025
+Universidade Cruzeiro do Sul Virtual

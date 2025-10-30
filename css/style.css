@@ -147,3 +147,7 @@ button:disabled {
   outline: 3px solid #2ecc71;
   outline-offset: 2px;
 }
+.dark-mode {
+  background-color: #111;
+  color: #f1f1f1;
+}
